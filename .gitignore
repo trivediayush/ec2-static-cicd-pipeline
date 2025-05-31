@@ -1,4 +1,4 @@
-# Node modules
+# Node dependencies
 node_modules/
 
 # Logs
@@ -6,36 +6,31 @@ logs/
 *.log
 npm-debug.log*
 
-# Dependency directories
-bower_components/
-
 # Build outputs
 dist/
 build/
 
-# Coverage reports
-coverage/
-
-# Operating system files
+# OS-specific files
 .DS_Store
 Thumbs.db
 
-# Environment variables (if any)
+# Editor/IDE settings
+.vscode/
+.idea/
+
+# Environment variables
 .env
 
-# npm package lock files (optional)
-package-lock.json
-yarn.lock
-
-# VS Code settings
-.vscode/
-
-# LHCI reports
-.lhci/
-
-# Surge cache (if any)
+# Surge cache (if created)
 .surge/
 
-# Miscellaneous
+# LHCI reports (if used)
+.lhci/
+
+# Temporary/backup files
 *.bak
 *.tmp
+
+# Don't ignore lock file (needed for npm ci)
+# DO NOT include `package-lock.json` here
+
