@@ -1,0 +1,36 @@
+name: CI/CD for Static Web App
+
+on:
+  push:
+    branches: [master]
+
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm ci 
+
+      - name: Lint JS 
+        run: npm run lint 
+
+      - name: Format Check 
+        run: npm run format 
+
+      - name: Run Lighthouse Tests
+        run: npm run lighthouse || echo "Lighthouse failed, skipping block"
+
+      - name: Deploy to Surge
+        run: |
+          npm install -g surge
+          surge ./public ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}

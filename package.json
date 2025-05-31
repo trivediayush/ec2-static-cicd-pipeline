@@ -1,0 +1,14 @@
+{
+  "name": "static-cicd-app",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint public/*.js",
+    "format": "prettier --check public/*",
+    "lighthouse": "lighthouse-ci"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0",
+    "@lhci/cli": "^0.8.0"
+  }
+}
