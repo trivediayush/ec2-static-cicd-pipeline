@@ -2,7 +2,7 @@ name: CI/CD for Static Web App
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 
 jobs:
