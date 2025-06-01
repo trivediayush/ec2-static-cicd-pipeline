@@ -29,7 +29,7 @@ This project demonstrates a fully automated CI/CD pipeline that builds and deplo
 
 📸 Video
 -------------
-<video src="assets/video.mp4" autoplay loop muted></video>
+<video src="assets/video.mp4" controls></video>
 
 📂 Repository
 -------------
