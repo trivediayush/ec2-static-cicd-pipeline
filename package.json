@@ -4,6 +4,7 @@
   "scripts": {
     "lint": "eslint public/*.js",
     "format": "prettier --check public/*",
+    "format:fix": "prettier --write public/*",
     "lighthouse": "lighthouse-ci"
   },
   "devDependencies": {
@@ -12,3 +13,4 @@
     "@lhci/cli": "^0.8.0"
   }
 }
+

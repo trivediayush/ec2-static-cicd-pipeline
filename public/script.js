@@ -1,1 +1,1 @@
-console.log("Static app running...");
+console.log('Static app running...');
